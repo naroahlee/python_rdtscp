@@ -1,6 +1,16 @@
-python setup.py build_ext --inplace
+# Read.me naroahlee Sep/26/2018
+# ========= Usage ==========
 
-python
+make
+make run
 
-import rdtscp_module
-rdtscp_module.rdtscp()
+==========  More Info ==========
+
+How to write a python object wrapper to a C function
+
+1. Write [module_name].c
+2. Write setup.py
+3. run "python setup.py build_ext --inplace" to generate [module_name].so
+4. in python, run
+	import [module_name]
+	[module_name].[yourfxn]()
